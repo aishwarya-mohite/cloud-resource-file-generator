@@ -93,7 +93,7 @@ public class FileGenerator {
 			+ "puts \"----------------------------------------------\"\n" + "\n" + "" + resourceName
 			+ " = getOutputHashByResourceType(ResourceType::" + resourceName.toUpperCase() + ")\n" + "\n" + "if "
 			+ resourceName + " != nil\n" + "    " + resourceName + ".each do |name, id|\n" + "		" + resourceName
-			+ "_attributes = getAttributesByResourceTypeAndName(ResourceType::" + resourceName + ",name)\n"
+			+ "_attributes = getAttributesByResourceTypeAndName(ResourceType::" + resourceName.toUpperCase() + ",name)\n"
 			+ "		if " + resourceName + "_attributes != nil\n"
 			+ "			puts \"---------------------------------------------\"\n"
 			+ "			puts \"Validating awspec for " + resourceName + " #{name}\"\n"
@@ -112,7 +112,7 @@ public class FileGenerator {
 
 	}
 
-	String specPage = specData1 + specData2 + "			end\n" + "     \n" + "		end\n" + "	end\n" + "end";
+	String specPage = specData1 + specData2 + "\n			end\n" + "     \n" + "		end\n" + "	end\n" + "end";
 
 	FileOutputStream out2 = new FileOutputStream(
 			repoPath+"spec/aws_resources/" + resourceName + "/" + resourceName + "_spec.rb");
