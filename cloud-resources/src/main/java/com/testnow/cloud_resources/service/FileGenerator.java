@@ -32,6 +32,7 @@ public class FileGenerator {
 			f.seek(f.length() - 4); // before end
 			f.write(text.getBytes());
 			f.close();
+			System.out.println("Resource "+resourceName+ "added in ResourceType");
 		} catch (IOException e) {
 		}
 	}

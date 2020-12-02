@@ -123,7 +123,7 @@ public class Utils {
 	}
 	
 	public static Map<String, Object> jsonToMap(String json) {
-		HashMap<String, Object> map = new HashMap<String, Object>();
+		Map<String, Object> map = new HashMap<String, Object>();
 
 		ObjectMapper mapper = new ObjectMapper();
 		try {
