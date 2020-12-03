@@ -110,7 +110,9 @@ public class FileGenerator {
 				"      puts \"Validating "+specType+" spec for resource - "+resourceName+" : #{name}\"\n" + 
 				"      puts \"--------------------------------------------\"\n" + 
 				"\n" + 
-				"      describe hcap_"+resourceName+"(value) do";
+				"      describe hcap_"+resourceName+"(value) do\n         context \"When validating existance of "+resourceName+" [#{name}]\" do\n" + 
+						"          it {should exist}\n" + 
+						"         end";
 		String data2 = "";
 		for (String key4 : mainMap.keySet()) {
 			data2 = data2 + "\n" + "\t\tif " + resourceName + "_attributes.has_key?("
