@@ -50,7 +50,7 @@ public class FileGenerator {
 				"    end\n" + 
 				"\n" + 
 				"    def exists?\n" + 
-				"      if defined?(@response) == nil || @response.nil?\n" + 
+				"      if defined?(@resp) == nil || @resp.nil?\n" + 
 				"       fail \"The "+resourceName+" does not exist\"\n" + 
 				"      else\n" + 
 				"      true\n" + 
@@ -107,10 +107,10 @@ public class FileGenerator {
 				"    if "+resourceName+"_attributes != nil \n" + 
 				"\n" + 
 				"      puts \"--------------------------------------------\"\n" + 
-				"      puts \"Validating "+specType+" spec for resource - "+resourceName+" : #{name}\"\n" + 
+				"      puts \"Validating "+specType+" spec for resource - "+resourceName+" : #{value}\"\n" + 
 				"      puts \"--------------------------------------------\"\n" + 
 				"\n" + 
-				"      describe hcap_"+resourceName+"(value) do\n         context \"When validating existance of "+resourceName+" [#{name}]\" do\n" + 
+				"      describe hcap_"+resourceName+"(value) do\n         context \"When validating existance of "+resourceName+" [#{value}]\" do\n" + 
 						"          it {should exist}\n" + 
 						"         end";
 		String data2 = "";
