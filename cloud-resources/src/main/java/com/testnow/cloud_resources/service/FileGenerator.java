@@ -59,7 +59,7 @@ public class FileGenerator {
 		String data2 = "";
 		for (String key : mainMap.keySet()) {
 			System.out.println(key);
-			data2 = data2 + "\n" + "    def " + key + "\n" + "      @resp\n" + "    end";
+			data2 = data2 + "\n" + "    def " + key + "\n" + "      @resp."+key+"\n" + "    end";
 
 		}
 		String data3 = "end\n" + 
